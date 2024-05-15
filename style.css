@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg,#153677, #4e085f);
+    /* border: 1px solid black; */
+    padding: 10px;
+}
+
+.todo-app{
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  /* border: 1px solid black; */
+  /* top (left-right) bottom */
+  margin: 100px auto 20px;
+  padding: 40px 30px 80px;
+  border-radius: 10px;
+}
+
+.todo-app h2{
+    color: #002765;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.row
+{
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius:30px;
+    padding-left: 20px;
+    margin-bottom:25px;
+}
+
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color:#fff;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    /* border: 1px solid black; */
+    /* top right bottom left */
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    /* border: 1px solid black; */
+    background-color: #ff5945;
+    border-radius: 100%;
+    top: 12px;
+    left: 8px;
+} 
+
+ul li::before :hover{
+    border:1px solid black;
+    background-color: green;
+    height: 17px;
+    width: 17px;
+} 
+/* It will strike through the li in the list container. */
+ul li.checked{
+    color: #0c0c0c;
+    text-decoration: line-through;
+}
+
+ul li.checked::after{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    /* border: 1px solid black; */
+    background-color: #5bff45;
+    border-radius: 100%;
+    top: 12px;
+    left: 8px;
+}
+
+/* It will create a necessary gap after every to-do in the list-container. */
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    /* border: 1px solid black; */
+    height: 40px;
+    font-size: 22px;
+    color: #0c0c0c;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+
+ul li span:hover{
+    background: #edeef0;
+}
